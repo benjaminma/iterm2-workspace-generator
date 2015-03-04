@@ -1,1 +1,69 @@
-<div>this is the wsTerm directive</div>
+<div class="ws-term">
+    <div class="wst-window">
+        <ul ui-sortable="sortableOptions" ng-model="tabList" class="nav nav-tabs" data-tabs="tabs">
+            <li ng-class="{active: tab.active}" ng-repeat="tab in tabList" ng-click="setActiveTab(tab)">
+                <a><span ng-bind="tab.title"></span></a>
+                <div class="wst-tab-x" ng-click="removeTabByIndex($index)" ng-hide="($index === 0) && (tabList.length === 1)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </div>
+            </li>
+            <li class="nav-tab-add pull-right">
+                <div class="wst-tab-add" ng-click="createNewTab()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </div>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="item tab-pane bg-{{tab.background}}" ng-class="{active: tab.active}" id="tab-{{tab.id}}" ng-repeat="tab in tabList">
+              <form>
+                <fieldset>
+                  <legend>Tab Configuration</legend>
+                  <div class="form-group col-md-12">
+                    <label for="tab-{{tab.id}}-title" class="col-md-2">
+                      Title
+                    </label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="tab-{{tab.id}}-title" ng-model="tab.title" placeholder="Tab name">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="tab-{{tab.id}}-path" class="col-md-2">
+                      Path
+                    </label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="tab-{{tab.id}}-path" ng-model="tab.path" placeholder="e.g. ~/, ~/repos, /var/log">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="tab-{{tab.id}}-commands" class="col-md-2">
+                      Commands
+                    </label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="tab-{{tab.id}}-commands" ng-model="tab.commands" placeholder="e.g. git pull && git status">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label class="col-md-2">
+                      Background
+                    </label>
+                    <div class="col-md-8">
+                      <div class="btn-group">
+                          <label class="btn btn-default" ng-model="tab.background" btn-radio="'black'">black</label>
+                          <label class="btn btn-default" ng-model="tab.background" btn-radio="'blue'">blue</label>
+                          <label class="btn btn-default" ng-model="tab.background" btn-radio="'red'">red</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+    </div>
+    <div class="wst-controls">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Workspace name" aria-describedby="addon-applescript">
+            <span class="input-group-addon" id="addon-applescript">.applescript</span>
+        </div>
+        <div class="input-group">
+            <textarea name="ws-output" id="ws-output" class="span12" rows="7"></textarea>
+        </div>
+    </div>
+</div>

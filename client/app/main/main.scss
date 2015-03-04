@@ -16,10 +16,11 @@
 .hero-unit {
     position: relative;
     padding: 30px 15px;
-    color: #F5F5F5;
+    color: #09FF0E;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    // background: #4393B9;
+    background: $color-terminal-background;
 }
 
 .footer {

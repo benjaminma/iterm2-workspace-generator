@@ -8,6 +8,27 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
+$color-lead: RGB(30, 30, 30);
+$color-snow: RGB(255, 255, 255);
+$color-midnight: RGB(0, 24, 136);
+$color-cayenne: RGB(137, 17, 0);
+
+$color-black: $color-lead;
+$color-white: $color-snow;
+
+$color-offwhite: RGB(240, 240, 240);
+$color-darkergrey: RGB(102, 102, 102);
+$color-darkgrey: RGB(192, 192, 192);
+$color-grey: RGB(213, 210, 214);
+$color-lightgrey: RGB(204, 204, 204);
+$color-lightergrey: RGB(221, 221, 221);
+
+$color-terminal-green: RGB(0, 247, 0); 
+
+$color-tab-hover: $color-white;
+$color-terminal-foreground: $color-lightgrey;
+$color-terminal-background: $color-black;
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -15,9 +36,18 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f0f0;
+}
+
+div {
+  // border: 1px solid pink;
+}
+
 // Component styles are injected through grunt
 // injector
-@import 'account/login/login.scss';
-@import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'wsTerm/wsTerm.scss';
+@import 'modal/modal.scss';
 // endinjector

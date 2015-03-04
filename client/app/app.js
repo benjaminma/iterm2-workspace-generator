@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('iterm2WorkspaceGeneratorApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.sortable'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
