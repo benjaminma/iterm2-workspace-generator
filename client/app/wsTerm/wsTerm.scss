@@ -1,38 +1,40 @@
 .ws-term {}
 .wst-window {
+    @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26));
     overflow: hidden;
     margin-top: 20px;
     border: 1px solid $color-darkergrey;
     border-radius: 5px;
-    background: #d9d9d9d;
+    // background: #d9d9d9d;
+    background: pink;
 }
-.wst-tabs {
-    border-bottom: 1px solid $color-darkgrey;
-    background: $color-grey;
-}
-.wst-tab:first-child {
-    // margin-left: 5px;
-}
-.wst-tab:last-child {
-    min-width: 50px;
-    max-width: 50px;
-}
-.wst-tab {
-    position: relative;
-    display: inline-block;
-    min-width: 120px;
-    height: 24px;
-    padding: 2px 20px;
-    text-align: center;
-    border: 1px solid $color-darkgrey;
-    border-bottom-width: 0;
-    border-radius: 4px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.wst-tab:hover {
-    background: $color-white;
-}
+// .wst-tabs {
+//     border-bottom: 1px solid $color-darkgrey;
+//     background: $color-grey;
+// }
+// .wst-tab:first-child {
+//     // margin-left: 5px;
+// }
+// .wst-tab:last-child {
+//     min-width: 50px;
+//     max-width: 50px;
+// }
+// .wst-tab {
+//     position: relative;
+//     display: inline-block;
+//     min-width: 120px;
+//     height: 24px;
+//     padding: 2px 20px;
+//     text-align: center;
+//     border: 1px solid $color-darkgrey;
+//     border-bottom-width: 0;
+//     border-radius: 4px;
+//     border-bottom-right-radius: 0;
+//     border-bottom-left-radius: 0;
+// }
+// .wst-tab:hover {
+//     background: $color-white;
+// }
 .wst-tab-x {
     font-size: 12px;
     line-height: 25px;
@@ -45,7 +47,7 @@
     color: $color-darkergrey;
 }
 .wst-tab-x:hover {
-    color: red;
+    color: $color-cayenne;
 }
 .nav-tabs {
     background: $color-grey;
@@ -62,7 +64,7 @@ li.nav-tab-add {
     color: $color-darkergrey;
 }
 .wst-tab-add:hover {
-    color: blue;
+    color: $color-white;
 }
 .wst-tab-content {
     height: 180px;
