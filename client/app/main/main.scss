@@ -16,16 +16,19 @@
 .hero-unit {
     position: relative;
     padding: 30px 15px;
-    color: #09FF0E;
+    color: $color-snow;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    // background: #4393B9;
-    background: $color-terminal-background;
+    background: $color-black;
 }
 
 .footer {
     text-align: center;
     padding: 30px 0;
     margin-top: 70px;
-    border-top: 1px solid #E5E5E5;
+    // border-top: 1px solid $color-darkergrey;
+}
+
+.iterm2-logo {
+    @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.56));
 }

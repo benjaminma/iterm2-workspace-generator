@@ -2,7 +2,7 @@
 .wst-window {
     @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26));
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 30px;
     border: 1px solid $color-darkergrey;
     border-radius: 5px;
     // background: #d9d9d9d;
@@ -52,8 +52,9 @@
 .nav-tabs {
     background: $color-grey;
 }
-li.nav-tab-add {
+.nav-tabs > li.nav-tab-add {
     width: 50px;
+    min-width: 50px;
     background: transparent;
 }
 .wst-tab-add {
@@ -73,7 +74,7 @@ li.nav-tab-add {
 }
 .wst-controls {
     height: 200px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 #ws-output {
     width: 100%;
@@ -133,4 +134,10 @@ legend {
     width: 100%;
     padding: 15px;
     color: $color-terminal-foreground;
+}
+
+#ws-output {
+  margin-top: 15px;
+  font-family: monospace;
+  font-size: 12px;
 }
