@@ -12,7 +12,7 @@
             </li>
         </ul>
         <div class="tab-content">
-            <div class="item tab-pane bg-{{tab.def.background}}" ng-class="{active: tab.active}" id="tab-{{tab.id}}" ng-repeat="tab in tabList">
+            <div class="item tab-pane" style="background: {{backgroundColors[tab.def.background].rgb}};" ng-class="{active: tab.active}" id="tab-{{tab.id}}" ng-repeat="tab in tabList">
               <form>
                 <fieldset>
                   <legend>Tab Configuration</legend>
@@ -46,10 +46,7 @@
                     </label>
                     <div class="col-md-8">
                       <div class="btn-group">
-                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="'black'">black</label>
-                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="'blue'">blue</label>
-                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="'red'">red</label>
-                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="'white'">white</label>
+                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="$index" ng-repeat="color in backgroundColors">{{color.name}}</label>
                       </div>
                     </div>
                   </div>
