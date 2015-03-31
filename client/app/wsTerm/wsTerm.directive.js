@@ -84,7 +84,7 @@ angular.module('iterm2WorkspaceGeneratorApp')
         // Load and configure .applescript template
         var compiledMainTemplate;
         var loadScriptTemplate = function () {
-          $http.get('/assets/main.tpl.applescript')
+          $http.get('assets/main.tpl.applescript')
             .then(function (data) {
               compiledMainTemplate = _.template(data.data);
             });
