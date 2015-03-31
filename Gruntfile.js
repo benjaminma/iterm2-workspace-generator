@@ -398,6 +398,12 @@ module.exports = function (grunt) {
           remote: 'openshift',
           branch: 'master'
         }
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:benjaminma/iterm2-workspace-generator.git',
+          branch: 'gh-pages'
+        }
       }
     },
 
