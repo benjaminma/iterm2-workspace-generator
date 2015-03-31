@@ -3,11 +3,11 @@
         <ul ui-sortable="sortableOptions" ng-model="tabList" class="nav nav-tabs" data-tabs="tabs">
             <li ng-class="{active: tab.active}" ng-repeat="tab in tabList" ng-click="setActiveTab(tab)">
                 <a><span ng-bind="tab.def.title"></span></a>
-                <div class="wst-tab-x" ng-click="removeTabByIndex($index)" ng-hide="($index === 0) && (tabList.length === 1)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                <div class="wst-tab-x" ng-click="removeTabByIndex($index)" ng-hide="($index === 0) && (tabList.length === 1)">x</span>
                 </div>
             </li>
             <li class="nav-tab-add pull-right">
-                <div class="wst-tab-add" ng-click="createNewTab()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <div class="wst-tab-add" ng-click="createNewTab()">+</span>
                 </div>
             </li>
         </ul>
