@@ -1,4 +1,10 @@
 <div class="ws-term">
+    <div class="wst-header">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Workspace name" aria-describedby="addon-applescript" ng-model="workspaceName" ng-change="generateAppleScript()">
+            <span class="input-group-addon" id="addon-applescript">.applescript</span>
+        </div>
+    </div>
     <div class="wst-window">
         <ul ui-sortable="sortableOptions" ng-model="tabList" class="nav nav-tabs" data-tabs="tabs">
             <li ng-class="{active: tab.active}" ng-repeat="tab in tabList" ng-click="setActiveTab(tab)">
@@ -13,54 +19,51 @@
         </ul>
         <div class="tab-content">
             <div class="item tab-pane" style="background: {{backgroundColors[tab.def.background].rgb}};" ng-class="{active: tab.active}" id="tab-{{tab.id}}" ng-repeat="tab in tabList">
-              <form>
-                <fieldset>
-                  <legend>Tab Configuration</legend>
-                  <div class="form-group col-md-12">
-                    <label for="tab-{{tab.id}}-title" class="col-md-2">
-                      Title
-                    </label>
-                    <div class="col-md-8">
-                      <input type="text" class="form-control" id="tab-{{tab.id}}-title" ng-model="tab.def.title" placeholder="Tab name">
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="tab-{{tab.id}}-path" class="col-md-2">
-                      Path
-                    </label>
-                    <div class="col-md-8">
-                      <input type="text" class="form-control" id="tab-{{tab.id}}-path" ng-model="tab.def.path" placeholder="e.g. ~/, ~/repos, /var/log">
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="tab-{{tab.id}}-commands" class="col-md-2">
-                      Commands
-                    </label>
-                    <div class="col-md-8">
-                      <input type="text" class="form-control" id="tab-{{tab.id}}-commands" ng-model="tab.def.commands" placeholder="e.g. git pull && git status">
-                    </div>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label class="col-md-2">
-                      Background
-                    </label>
-                    <div class="col-md-8">
-                      <div class="btn-group">
-                          <label class="btn btn-default" ng-model="tab.def.background" btn-radio="$index" ng-repeat="color in backgroundColors">{{color.name}}</label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
+                <form>
+                    <fieldset>
+                        <legend>Tab Configuration</legend>
+                        <div class="form-group col-md-12">
+                            <label for="tab-{{tab.id}}-title" class="col-md-2">
+                                Title
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="tab-{{tab.id}}-title" ng-model="tab.def.title" placeholder="Tab name">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="tab-{{tab.id}}-path" class="col-md-2">
+                                Path
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="tab-{{tab.id}}-path" ng-model="tab.def.path" placeholder="e.g. ~/, ~/repos, /var/log">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="tab-{{tab.id}}-commands" class="col-md-2">
+                                Commands
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="tab-{{tab.id}}-commands" ng-model="tab.def.commands" placeholder="e.g. git pull && git status">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2">
+                                Background
+                            </label>
+                            <div class="col-md-8">
+                                <div class="btn-group">
+                                    <label class="btn btn-default" ng-model="tab.def.background" btn-radio="$index" ng-repeat="color in backgroundColors">{{color.name}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </div>
     <div class="wst-controls">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Workspace name" aria-describedby="addon-applescript" ng-model="workspaceName">
-            <span class="input-group-addon" id="addon-applescript">.applescript</span>
-        </div>
         <div class="form-group">
+            <button class="btn btn-primary form-control" ng-click="generateAppleScript()">Generate {{workspaceName}}.applescript</button>
             <textarea name="ws-output" id="ws-output" rows="12" ng-model="workspaceOutput" ng-click="selectAllOutput($event)" readonly="readonly"></textarea>
         </div>
     </div>
