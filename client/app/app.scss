@@ -45,6 +45,10 @@ div {
   // border: 1px solid pink;
 }
 
+.txt-center {
+  text-align: center;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'main/main.scss';

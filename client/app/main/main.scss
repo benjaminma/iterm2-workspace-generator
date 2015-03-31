@@ -32,3 +32,7 @@
 .iterm2-logo {
     @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.56));
 }
+
+.container .row {
+  margin-top: 15px;
+}

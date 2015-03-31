@@ -1,10 +1,4 @@
 <div class="ws-term">
-    <div class="wst-header">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Workspace name" aria-describedby="addon-applescript" ng-model="workspaceName" ng-change="generateAppleScript()">
-            <span class="input-group-addon" id="addon-applescript">.applescript</span>
-        </div>
-    </div>
     <div class="wst-window">
         <ul ui-sortable="sortableOptions" ng-model="tabList" class="nav nav-tabs" data-tabs="tabs">
             <li ng-class="{active: tab.active}" ng-repeat="tab in tabList" ng-click="setActiveTab(tab)">
@@ -59,6 +53,12 @@
                     </fieldset>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="wst-workspace">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Workspace name" aria-describedby="addon-applescript" ng-model="workspaceName" ng-change="generateAppleScript()">
+            <span class="input-group-addon" id="addon-applescript">.applescript</span>
         </div>
     </div>
     <div class="wst-controls">

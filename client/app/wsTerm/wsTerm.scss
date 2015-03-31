@@ -1,40 +1,15 @@
-.ws-term {}
+.ws-term {
+    margin-top: 15px;
+}
+
 .wst-window {
     @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26));
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 15px;
     border: 1px solid $color-darkergrey;
     border-radius: 5px;
-    // background: #d9d9d9d;
-    background: pink;
 }
-// .wst-tabs {
-//     border-bottom: 1px solid $color-darkgrey;
-//     background: $color-grey;
-// }
-// .wst-tab:first-child {
-//     // margin-left: 5px;
-// }
-// .wst-tab:last-child {
-//     min-width: 50px;
-//     max-width: 50px;
-// }
-// .wst-tab {
-//     position: relative;
-//     display: inline-block;
-//     min-width: 120px;
-//     height: 24px;
-//     padding: 2px 20px;
-//     text-align: center;
-//     border: 1px solid $color-darkgrey;
-//     border-bottom-width: 0;
-//     border-radius: 4px;
-//     border-bottom-right-radius: 0;
-//     border-bottom-left-radius: 0;
-// }
-// .wst-tab:hover {
-//     background: $color-white;
-// }
+
 .wst-tab-x {
     font-size: 12px;
     line-height: 25px;
@@ -46,17 +21,21 @@
     text-align: center;
     color: $color-darkergrey;
 }
+
 .wst-tab-x:hover {
     color: $color-cayenne;
 }
+
 .nav-tabs {
     background: $color-grey;
 }
+
 .nav-tabs > li.nav-tab-add {
     width: 50px;
     min-width: 50px;
     background: transparent;
 }
+
 .wst-tab-add {
     font-size: 16px;
     line-height: 40px;
@@ -64,29 +43,35 @@
     text-align: center;
     color: $color-darkergrey;
 }
+
 .wst-tab-add:hover {
     color: $color-white;
 }
+
 .wst-tab-content {
     height: 180px;
     color: $color-terminal-foreground;
     background: $color-terminal-background;
 }
+
 .wst-controls {
     height: 200px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
+
 #ws-output {
     width: 100%;
     resize: none;
     border: 1px solid $color-lightgrey;
     border-radius: 5px;
 }
+
 .nav-tabs > li {
     min-width: 100px;
     // padding: 5px;
     cursor: pointer;
 }
+
 .nav-tabs > li > a {
     height: 36px;
     margin-top: 4px;
@@ -95,27 +80,34 @@
     border-bottom-color: transparent;
     background: $color-lightergrey;
 }
+
 .nav-tabs > li.active > a {
     border: 1px solid $color-lightgrey;
     border-bottom-color: transparent;
     background: $color-offwhite;
 }
+
 .nav-tabs > li > a:hover {
     background: $color-white;
 }
+
 .nav-tabs > li > a > span {
     margin-right: 10px;
 }
+
 .tab-content {
     background: $color-terminal-background;
 }
+
 .list {
     margin: 10px 0 30px;
     list-style: none outside none;
 }
+
 legend {
     color: $color-terminal-foreground;
 }
+
 .item {
     font-size: 1.1em;
     font-weight: bold;
@@ -124,8 +116,12 @@ legend {
     color: $color-terminal-foreground;
 }
 
+.wst-workspace {
+  margin-top: 30px;
+}
+
 #ws-output {
-  margin-top: 15px;
-  font-family: monospace;
-  font-size: 12px;
+    margin-top: 15px;
+    font-family: monospace;
+    font-size: 12px;
 }
