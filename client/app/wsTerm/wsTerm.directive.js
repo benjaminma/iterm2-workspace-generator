@@ -141,7 +141,7 @@ angular.module('iterm2WorkspaceGeneratorApp')
         ctrl.generateAppleScript = debouncedGenerateAppleScript;
 
         // Generate script on changes to tabList
-        var watchTabList = ctrl.$watch('tabList', function (newVal) {
+        ctrl.$watch('tabList', function () {
           debouncedGenerateAppleScript();
         }, true);
 
